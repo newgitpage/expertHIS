@@ -14,7 +14,7 @@ export default async function handler(req, res) {
     const { message } = req.body;
 
     try {
-        const response = await fetch("https://api.groq.com/openai/v1/chat/completions", {
+        const response = await fetch("https://expert-his.vercel.app/", {
             method: "POST",
             headers: {
                 "Authorization": `Bearer ${process.env.GROQ_API_KEY}`,
@@ -55,3 +55,4 @@ export default async function handler(req, res) {
     }
 
 }
+
